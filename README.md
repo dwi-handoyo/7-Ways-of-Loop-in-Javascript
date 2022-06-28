@@ -1,10 +1,10 @@
 # 7-Ways-of-Loop-in-Javascript
 
-There are seven ways to perform loop in javascript.
+There are seven ways to perform loop in javascript. Loop is applicable in array, string, and node list. 
 
 1. while
 
-   Loops through a block of code while a specified condition is true.
+   Loops through a block of code while a specified condition is true. 
 
    let i = 0;
    while (i < 3) {
@@ -53,9 +53,9 @@ There are seven ways to perform loop in javascript.
    arr.foo = 'hello';
 
    // For ... in loop returns keys (0, 1, 2, 3)
-  for (let i in arr) {
+   for (let i in arr) {
     console.log(i); // output: "0", "1", "2", "foo"  
-  }
+   }
 
    // For ... of loop returns values (3, 5, 7)
    for (let i of arr) {
@@ -67,22 +67,23 @@ There are seven ways to perform loop in javascript.
 
    An Array method that executes a custom callback function on each item in an array. The forEach loop can only be used on Arrays, Sets, and Maps.
 
-let arr = [1, 2, 3, 4]
-arr.forEach((item, index) => {
-  console.log(item)
-})
-//output: 1 2 3 4
+   let arr = [1, 2, 3, 4]
+   arr.forEach((item, index) => {
+     console.log(item)
+   })
+   //output: 1 2 3 4
 
 7. Recursive
 
-A function that calls itself until something (base case) stops it.
+   A function that calls itself until something (base case) stops it.
 
-function loop(loopsLeft){
-  if(loopsLeft > 0){              // this is the base case
-    console.log(loopsLeft)
-    loop(loopsLeft - 1)
-  } else {
-    return true 
-  }
-}
-loop(5); // output: 5 4 3 2 1
+   function loop(loopsLeft){
+      if(loopsLeft > 0){              // this is the base case
+        console.log(loopsLeft)
+      loop(loopsLeft - 1)
+      } else {
+        return true; 
+      }
+   }
+
+   loop(5); // output: 5 4 3 2 1
