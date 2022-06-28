@@ -71,7 +71,39 @@ for (const [i, m] of mhs.entries()) {
 
     // Result:
     // Arjuna adalah mahasiswa ke-1
+
     // Nakula adalah mahasiswa ke-2
     // Sadewa adalah mahasiswa ke-3
+
+const mhs = ['Arjuna', 'Nakula', 'Sadewa'];
+
+// #4 Way - "for ...in" Loop
+
+// for ...in loop will return array index
+for(let item in mhs){
+ console.log(item);
+}
+    // output: 
+    // 0 
+    // 1 
+    // 2 
+
+// to return array values, apply this
+for(let item in mhs){
+ console.log(mhs[item]);
+}
+    // output:
+    // Arjuna
+    // Nakula
+    // Sadewa
+
+for(let item in mhs){
+ console.log(`${mhs[item]} adalah mahasiswa ke-${item * 1 + 1}`); // multiply by "1" first to make it integer, or:
+ // console.log (`${mhs[item]} adalah mahasiswa ke-${parseInt(item) + 1}`);
+}
+    // output:
+    // Arjuna adalah mahasiswa ke-1"
+    // Nakula adalah mahasiswa ke-2"
+    // Sadewa adalah mahasiswa ke-3"
 
 
