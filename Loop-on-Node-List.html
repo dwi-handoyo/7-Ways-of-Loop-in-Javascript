@@ -1,0 +1,61 @@
+
+<p>Loop on NodeList (Nodelist is related DOM)</p>
+
+<ul>
+ <li class="nama">Arjuna</li>
+ <li class="nama">Nakula</li>
+ <li class="nama">Sadewa</li>
+</ul>
+
+<ul class="list">
+<li>Satu</li>
+<li>Dua</li>
+<li>Tiga</li>
+</ul>
+
+<script>
+
+const liNama = document.querySelectorAll('.nama') // collect all tags with class '.nama'
+
+liNama.forEach(n => console.log(n.textContent));
+  // output:
+  // Arjuna
+  // Nakula
+  // Sadewa
+  
+//pada browser lama loop NodeList dengan forEach tidak bisa, karena bukan Array
+//pada browser baru loop NodeList bisa dengan forEach
+
+for (n of liNama) {
+ console.log(n.innerHTML);
+}
+   // output:
+   // Arjuna
+   // Nakula
+   // Sadewa
+
+let nl = document.querySelector(".list").getElementsByTagName("li");
+
+let arr = [...nl].map(m => m.textContent);
+
+console.log(arr);
+   // output:
+   // ["Satu", "Dua", "Tiga"]
+  
+let arr1 = [];
+for(let i=0; i<nl.length; i++){
+ arr1.push(nl[i].textContent);
+}
+
+console.log(arr1);  
+   // output:
+   // ["Satu", "Dua", "Tiga"]
+ 
+  
+  
+</script>
+
+
+
+
+
