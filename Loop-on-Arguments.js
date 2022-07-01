@@ -27,6 +27,7 @@ console.log(arr);
 
 // 2. Loop on Arguments
 
+// Spread operator (...)
 function sumTwo(...args){
   let sum = 0;
   for(const arg of args){
@@ -41,6 +42,7 @@ console.log(hsl);
 //output:
 // 11
 
+// Rest parameter (...)
 function sumThree(a, b, ...args){
   let multi = a * b;
   let sum = 0;
@@ -56,6 +58,7 @@ console.log(sumThree(3, 5, 7, 6, 8));
 // output:
 // [21, 15]
 
+// Spread Operator
 function sumAll(...args){
  sum = 0;
  for(let arg of args){
