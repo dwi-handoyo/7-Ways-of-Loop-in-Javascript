@@ -43,6 +43,20 @@ mhs.forEach((m, i) => {
     // Nakula adalah mahasiswa ke-2
     // Sadewa adalah mahasiswa ke-3
 
+let arr = [2,1,3,6,4,9,2,4,7,8,5];
+
+let arr1 = [];
+
+arr.forEach( function(m){
+ if(m>4){
+  return arr1.push(m); 
+ }
+});
+
+console.log(arr1);
+
+    // Result: [6, 9, 7, 8, 5]
+
 // #3 Way - "for ...of" Loop 
 
 for (const m of mhs) {
